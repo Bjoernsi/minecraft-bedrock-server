@@ -1,5 +1,8 @@
 FROM debian:12.0-slim
 
+LABEL maintainer="Björn"
+LABEL build_date="2023-06-30"
+
 WORKDIR /bedrock-server
 ADD https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.1.02.zip /tmp/mbs.zip
 
@@ -10,4 +13,4 @@ RUN apt update                               && \
     chmod +x bedrock_server
 
 ENV LD_LIBRARY_PATH=.
-CMD ./bedrock_server
+CMD ./bedrock_servers
