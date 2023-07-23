@@ -13,4 +13,4 @@ RUN apt update                               && \
     chmod +x bedrock_server
 
 ENV LD_LIBRARY_PATH=.
-CMD ./bedrock_servers
+#CMD ./bedrock_servers
