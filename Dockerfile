@@ -1,10 +1,10 @@
 FROM debian:12.0-slim
 
 LABEL maintainer="Björn"
-LABEL build_date="2023-07-26"
+LABEL build_date="2023-08-19"
 
 WORKDIR /bedrock-server
-ADD https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.15.01.zip /tmp/mbs.zip
+ADD https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.30.02.zip /tmp/mbs.zip
 
 RUN apt update                               && \
     apt install -y unzip libcurl4            && \
