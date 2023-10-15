@@ -4,7 +4,7 @@ LABEL maintainer="Björn"
 LABEL build_date="2023-08-19"
 
 WORKDIR /bedrock-server
-ADD https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.30.02.zip /tmp/mbs.zip
+ADD https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.32.03.zip /tmp/mbs.zip
 
 RUN apt update                               && \
     apt install -y unzip libcurl4            && \
