@@ -1,7 +1,7 @@
 FROM debian:12.0-slim
 
 LABEL maintainer="Björn"
-LABEL build_date="2023-08-19"
+LABEL build_date="2024-02-06"
 
 WORKDIR /bedrock-server
 ADD https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.61.01.zip /tmp/mbs.zip
