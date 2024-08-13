@@ -7,7 +7,8 @@ WORKDIR /bedrock-server
 
 RUN DEBIAN_FRONTEND=noninteractive apt update && apt install -y --no-install-recommends unzip ca-certificates curl tzdata
 RUN curl -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4.212 Safari/537.36" \
-    -o "/tmp/mbs.zip" "https://minecraft.azureedge.net/bin-linux/bedrock-server-1.21.20.03.zip"
+#   -o "/tmp/mbs.zip" "https://minecraft.azureedge.net/bin-linux/bedrock-server-1.21.20.03.zip"
+   -o "/tmp/mbs.zip" "https://minecraft.azureedge.net/bin-linux-preview/bedrock-server-1.21.30.22.zip"
 
 RUN unzip /tmp/mbs.zip && \
     rm /tmp/mbs.zip    && \
