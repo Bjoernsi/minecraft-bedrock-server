@@ -1,4 +1,4 @@
-FROM debian:12.6-slim
+FROM debian:12.0-slim
 
 LABEL maintainer="Björn"
 LABEL build_date="2024-08-13"
