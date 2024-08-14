@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM ubuntu:22.04 as production
 
 LABEL maintainer="bjoern"
 LABEL build_date="2024-08-14"
