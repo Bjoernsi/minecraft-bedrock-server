@@ -1,4 +1,4 @@
-FROM debian:testing-slim as production
+FROM debian:testing-slim AS production
 
 LABEL maintainer="bjoern"
 LABEL build_date="2024-08-14"
