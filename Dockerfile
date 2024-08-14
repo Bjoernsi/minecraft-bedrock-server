@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 as production
+FROM ubuntu:22.04 AS production
 
 LABEL maintainer="bjoern"
 LABEL build_date="2024-08-14"
