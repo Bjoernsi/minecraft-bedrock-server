@@ -4,7 +4,7 @@ LABEL maintainer="bjoern"
 LABEL build_date="2024-10-24"
 
 WORKDIR /bedrock-server
-COPY https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.44.01.zip /temp/mbs.zip
+RUN curl https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.44.01.zip /temp/mbs.zip
 
 RUN apt update                                && \
     apt install -y unzip libcurl4             && \
