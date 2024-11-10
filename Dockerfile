@@ -5,9 +5,9 @@ LABEL build_date="2024-10-24"
 
 WORKDIR /bedrock-server
 
-
 RUN apt update                                && \
     apt install -y unzip libcurl4             && \
+    apk add --no-cache curl                   && \
     curl https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.44.01.zip /temp/mbs.zip && \
     unzip -q /temp/mbs.zip -d /bedrock-server && \
     rm /temp/mbs.zip                          && \
