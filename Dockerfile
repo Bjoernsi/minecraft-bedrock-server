@@ -1,4 +1,4 @@
-FROM ubuntu:25.04
+FROM alpine:latest
 
 LABEL maintainer="bjoern"
 LABEL build_date="2024-12-07"
