@@ -1,7 +1,6 @@
-# Basis-Image: Alpine Linux
 FROM alpine:latest
 
-LABEL maintainer="bjoern"
+LABEL maintainer="Björn"
 LABEL build_date="2024-12-07"
 
 # Setze das Arbeitsverzeichnis
@@ -22,4 +21,4 @@ RUN unzip -q /tmp/bedrock-server.zip -d /bedrock-server && \
 ENV LD_LIBRARY_PATH=.
 
 # Starte den Server
-CMD ["./bedrock_server"]
+#CMD ["./bedrock_server"]
