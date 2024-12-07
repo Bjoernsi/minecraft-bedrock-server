@@ -1,20 +1,25 @@
+# Basis-Image: Alpine Linux
 FROM alpine:latest
 
 LABEL maintainer="bjoern"
 LABEL build_date="2024-12-07"
 
+# Setze das Arbeitsverzeichnis
 WORKDIR /bedrock-server
-#ADD https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.50.10.zip /temp/mbs.zip
-#ADD 13.107.246.69/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.50.10.zip /temp/mbs.zip
-#ADD bedrock-server-1.21.50.10.zip /temp/mbs.zip
 
-RUN apt update
-RUN apk add --no-cache wget
+# Installiere benötigte Pakete
+RUN apk add --no-cache wget unzip libcurl
+
+# Lade die Bedrock-Server-Datei herunter
 RUN wget http://13.107.246.69/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.50.10.zip -O /tmp/bedrock-server.zip
 
-RUN apt install -y unzip libcurl4             && \
-    unzip -q /temp/mbs.zip -d /bedrock-server && \
-    rm /temp/mbs.zip                          && \
+# Entpacke die Datei und bereite die Umgebung vor
+RUN unzip -q /tmp/bedrock-server.zip -d /bedrock-server && \
+    rm /tmp/bedrock-server.zip && \
     chmod +x bedrock_server
 
+# Setze die Umgebungsvariable für die Bibliotheken
 ENV LD_LIBRARY_PATH=.
+
+# Starte den Server
+CMD ["./bedrock_server"]
