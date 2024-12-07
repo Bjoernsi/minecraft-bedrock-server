@@ -1,7 +1,7 @@
 FROM ubuntu:24.10
 
 LABEL maintainer="bjoern"
-LABEL build_date="2024-10-24"
+LABEL build_date="2024-12-07"
 
 WORKDIR /bedrock-server
 #ADD https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.50.10.zip /temp/mbs.zip
