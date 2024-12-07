@@ -10,12 +10,7 @@ WORKDIR /bedrock-server
 RUN apk add --no-cache wget unzip libcurl curl grep bash
 
 # Lade die Bedrock-Server-Datei herunter
-RUN curl -k -s https://www.minecraft.net/en-us/download/server/bedrock > /tmp/bedrock-page.html && \
-    cat /tmp/bedrock-page.html && \
-    grep -o 'https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-.*.zip' /tmp/bedrock-page.html | \
-    head -n 1 | \
-    xargs -r wget -O /tmp/bedrock-server.zip && \
-    rm /tmp/bedrock-page.html
+RUN wget https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.50.10.zip -O /tmp/bedrock-server.zip
 
 # Entpacke die Datei und bereite die Umgebung vor
 RUN unzip -q /tmp/bedrock-server.zip -d /bedrock-server && \
