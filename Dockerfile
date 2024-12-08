@@ -11,7 +11,7 @@ RUN apk add --no-cache wget unzip libcurl curl grep bash
 
 # Lade die Bedrock-Server-Datei herunter
 #RUN wget --timeout=90 https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.50.10.zip -O /tmp/bedrock-server.zip
-RUN curl -L --max-time 120 https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.50.10.zip -O /tmp/bedrock-server.zip
+RUN wget --max-time 120 https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.50.10.zip -O /tmp/bedrock-server.zip
 
 # Entpacke die Datei und bereite die Umgebung vor
 RUN unzip -q /tmp/bedrock-server.zip -d /bedrock-server && \
