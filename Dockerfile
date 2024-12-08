@@ -23,11 +23,5 @@ RUN unzip /tmp/bedrock-server.zip -d /bedrock-server && \
     rm /tmp/bedrock-server.zip && \
     chmod +x /bedrock-server/bedrock_server
 
-# Exponiere den Minecraft Bedrock-Port (Standard ist 19132)
-EXPOSE 19132/udp
-
 # Setze Umgebungsvariablen für den Server
-ENV LD_LIBRARY_PATH=/bedrock-server
-
-# Starte den Minecraft Bedrock-Server
-CMD ["./bedrock-server/bedrock_server"]
+ENV LD_LIBRARY_PATH=.
