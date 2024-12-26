@@ -1,8 +1,8 @@
 # Verwende ein leichtes Basis-Image
 FROM ubuntu:latest
 
-LABEL maintainer="bjoern"
-LABEL build_date="2024-12-12"
+LABEL maintainer="Björn"
+LABEL build_date="2024-12-26"
 
 # Setze das Arbeitsverzeichnis
 WORKDIR /bedrock-server
