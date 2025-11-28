@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 LABEL maintainer="Björn"
-LABEL build_date="2024-12-26"
+LABEL build_date="2025-11-26"
 
 # Setze das Arbeitsverzeichnis
 WORKDIR /bedrock-server
@@ -16,8 +16,8 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 # Lade den Bedrock-Server herunter (von der offiziellen Seite)
-#RUN wget -O /tmp/bedrock-server.zip https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.51.02.zip
-COPY bedrock-server-1.21.51.02.zip /tmp/bedrock-server.zip
+RUN wget -O /tmp/bedrock-server.zip https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.124.2.zip
+#COPY bedrock-server-1.21.51.02.zip /tmp/bedrock-server.zip
 
 # Entpacke die heruntergeladene ZIP-Datei und bereite die Umgebung vor
 RUN unzip /tmp/bedrock-server.zip -d /bedrock-server && \
