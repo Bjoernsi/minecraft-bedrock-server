@@ -26,9 +26,9 @@ RUN unzip /tmp/bedrock-server.zip -d /bedrock-server && \
 # Setze Umgebungsvariablen für den Server
 ENV LD_LIBRARY_PATH=.
 
-# Expose minecraft bedrock port IPv4
-EXPOSE 19132/tcp 19132/udp
-# Expose minecraft bedrock port IPv6
-EXPOSE 19133/tcp 19133/udp
+# Expose minecraft bedrock IPv4/6 Ports
+EXPOSE 19132/udp 19133/udp
 
 VOLUME /bedrock-server/worlds
+
+CMD ["sh", "-c", "./bedrock_server"]
