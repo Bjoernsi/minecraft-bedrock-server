@@ -31,4 +31,4 @@ EXPOSE 19132/udp 19133/udp
 
 VOLUME /bedrock-server/worlds
 
-CMD ["sh", "-c", "./bedrock_server"]
+CMD ["./bedrock_server"]
