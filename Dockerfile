@@ -1,8 +1,8 @@
 # Verwende ein leichtes Basis-Image
 FROM ubuntu:latest
 
-LABEL maintainer="Björn"
-LABEL build_date="2026-05-06"
+LABEL maintainer="Bjoernsi"
+LABEL build_date="2026-05-08"
 
 # Setze das Arbeitsverzeichnis
 WORKDIR /bedrock-server
@@ -25,3 +25,10 @@ RUN unzip /tmp/bedrock-server.zip -d /bedrock-server && \
 
 # Setze Umgebungsvariablen für den Server
 ENV LD_LIBRARY_PATH=.
+
+# Expose minecraft bedrock port IPv4
+EXPOSE 19132/tcp 19132/udp
+# Expose minecraft bedrock port IPv6
+EXPOSE 19133/tcp 19133/udp
+
+VOLUME /bedrock-server/worlds
